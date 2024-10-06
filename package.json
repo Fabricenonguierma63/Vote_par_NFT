@@ -1,0 +1,21 @@
+{
+  "name": "vote_par_nft",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nonguierma Wend Kuni Fabrice Ezékiel",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.2",
+    "elliptic": "^6.5.7",
+    "ethers": "^6.13.3",
+    "hardhat": "^2.22.12",
+    "web3": "^4.13.0"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0"
+  }
+}

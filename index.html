@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vote par NFT</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Page de vérification du NFT -->
+    <div id="verificationPage" class="container">
+        <h1>Vote par NFT</h1>
+        <p>Connectez votre portefeuille pour vérifier votre NFT et accéder à la page de vote.</p>
+
+        <!-- Espace d'information pour les messages -->
+        <div class="info-box">
+            <p>Bienvenue ! Ici, votre vote necessite la possession d'un NFT spécifique et votre vote sera enrégistrer sur la blockchain.</p>
+        </div>
+
+        <!-- Boutons -->
+        <button id="connectButton" class="primary-button">Connectez votre portefeuille</button>
+        <button id="verifyButton" class="secondary-button" disabled>Vérifiez votre NFT</button>
+
+        <div id="status"></div>
+    </div>
+
+    <!-- Page de vote -->
+    <div id="votingPage" class="container large hidden">
+        <h1>Page de vote</h1>
+        <p>Votez pour votre candidat :</p>
+        
+        <form id="votingForm" class="candidates">
+            <!-- Candidat 1: Barack Obama -->
+            <div class="candidate">
+                <img src="images/obama.jpg" alt="Barack Obama" class="candidate-photo">
+                <label>
+                    <input type="radio" name="vote" value="obama" required> Barack Obama
+                </label>
+            </div>
+
+            <!-- Candidat 2: Hillary Clinton -->
+            <div class="candidate">
+                <img src="images/clinton.jpg" alt="Hillary Clinton" class="candidate-photo">
+                <label>
+                    <input type="radio" name="vote" value="clinton"> Hillary Clinton
+                </label>
+            </div>
+
+            <!-- Candidat 3: Donald Trump -->
+            <div class="candidate">
+                <img src="images/trump.jpg" alt="Donald Trump" class="candidate-photo">
+                <label>
+                    <input type="radio" name="vote" value="trump"> Donald Trump
+                </label>
+            </div>
+        </form>
+
+        <!-- Bouton de vote placé en bas -->
+        <div class="vote-button-container">
+            <button id="voteButton" class="primary-button">Voter</button>
+        </div>
+
+        <div id="voteStatus"></div>
+    </div>
+    <!-- Scripts pour Web3.js et Ethers.js -->
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.6.1/dist/web3.min.js"></script>
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

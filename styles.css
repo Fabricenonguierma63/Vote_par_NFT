@@ -1,0 +1,140 @@
+/* styles.css */
+
+/* Réinitialisation des marges */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corps de la page */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(120deg, #000000, #80809b, #ffffff);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    block-size: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #fff;
+}
+
+/* Animation d'arrière-plan */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Conteneur central */
+.container {
+    background-color: rgba(0, 26, 51, 0.8);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    max-inline-size: 450px;
+    inline-size: 100%;
+    color: #fff;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+/* Agrandir la page de vote */
+.container.large {
+    max-inline-size: 800px;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #00d1ff;
+    margin-block-end: 20px;
+}
+
+p {
+    font-size: 1.1em;
+    margin-block-end: 20px;
+    color: #bdbdbd;
+}
+
+/* Boîte d'information */
+.info-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin-block-end: 20px;
+    color: #bdbdbd;
+}
+
+/* Boutons */
+button {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-block-start: 20px;
+    transition: all 0.3s ease;
+}
+
+.primary-button {
+    background: linear-gradient(145deg, #0099ff, #00d1ff);
+    color: white;
+    border: 2px solid #0099ff;
+}
+
+.primary-button:hover {
+    background: linear-gradient(145deg, #00d1ff, #0099ff);
+    box-shadow: 0 5px 15px rgba(0, 217, 255, 0.6);
+}
+
+button:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+}
+
+/* Conteneur des candidats */
+.candidates {
+    display: flex;
+    justify-content: space-between;
+    margin-block-start: 30px;
+}
+
+/* Style pour chaque candidat */
+.candidate {
+    text-align: center;
+    inline-size: 30%;
+}
+
+.candidate-photo {
+    inline-size: 150px;
+    block-size: 150px;
+    border-radius: 50%;
+    margin-block-end: 10px;
+    border: 3px solid #00d1ff;
+}
+
+label {
+    display: block;
+    font-size: 1.2em;
+    color: #bdbdbd;
+}
+
+/* Conteneur du bouton de vote */
+.vote-button-container {
+    margin-block-start: 50px;
+    text-align: center;
+}
+
+/* Status */
+#status, #voteStatus {
+    margin-block-start: 15px;
+    font-size: 1.1em;
+    color: #ffb800;
+}
+
+.hidden {
+    display: none;
+}
